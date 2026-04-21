@@ -1,4 +1,3 @@
-// ecom/vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -7,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://https://ecom-backend-16sc.onrender.com',
+        target: 'https://ecom-backend-16sc.onrender.com',
         changeOrigin: true,
         secure: false,
       }
