@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (email, password) => {
-    const res  = await fetch('http://localhost:5000/api/auth/login', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ email, password }) });
+    const res  = await fetch('http://https://ecom-backend-16sc.onrender.com/api/auth/login', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ email, password }) });
     const data = await res.json();
     if (!res.ok) throw new Error(data.msg);
     localStorage.setItem('user',  JSON.stringify(data.user));
@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (name, email, password, phone) => {
-    const res  = await fetch('http://localhost:5000/api/auth/register', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ name, email, password, phone }) });
+    const res  = await fetch('http://https://ecom-backend-16sc.onrender.com/api/auth/register', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ name, email, password, phone }) });
     const data = await res.json();
     if (!res.ok) throw new Error(data.msg);
     localStorage.setItem('user',  JSON.stringify(data.user));
