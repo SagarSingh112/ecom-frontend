@@ -1,4 +1,3 @@
-// src/components/App.jsx
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth }        from '../context/AuthContext';
@@ -7,7 +6,7 @@ import Dashboard          from '../context/pages/Dashboard';
 import Checkout           from '../context/pages/Checkout';
 import Orders             from '../context/pages/Orders';
 import AdminDashboard     from '../context/pages/AdminDashboard';
-import AdminLogin         from '../context/pages/AdminLogin';
+import AdminLogin         from '../context/pages/Adminlogin';
 import SupportPage        from '../context/pages/SupportPage';
 
 export default function App() {
@@ -29,10 +28,7 @@ export default function App() {
       <Route path="/checkout"    element={user ? <Checkout />  : <Navigate to="/login" replace />} />
       <Route path="/orders"      element={user ? <Orders />    : <Navigate to="/login" replace />} />
       <Route path="/admin"       element={user?.isAdmin ? <AdminDashboard /> : <Navigate to="/admin-login" replace />} />
-
-      {/* ✅ Support page — accessible to all logged-in users */}
       <Route path="/support"     element={user ? <SupportPage /> : <Navigate to="/login" replace />} />
-
       <Route path="*"            element={<Navigate to={user ? (user.isAdmin ? '/admin' : '/dashboard') : '/login'} replace />} />
     </Routes>
   );
