@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useCart } from '../CartContext';
 import { useNavigate } from 'react-router-dom';
 
-const API = 'http://https://ecom-backend-16sc.onrender.com/api';
+const API = 'https://ecom-backend-16sc.onrender.com/api';
 
 export default function Checkout() {
   const { cartItems, getCartTotal, clearCart } = useCart();

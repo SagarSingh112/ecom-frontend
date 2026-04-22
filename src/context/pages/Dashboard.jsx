@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext';
 import { useCart } from '../CartContext';
 
-const API = 'http://https://ecom-backend-16sc.onrender.com/api';
+const API = 'https://ecom-backend-16sc.onrender.com/api';
 
 const CATS = [
   { id:'All',         icon:'⚡', color:'#8b5cf6', glow:'rgba(139,92,246,0.4)' },

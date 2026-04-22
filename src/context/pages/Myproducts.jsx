@@ -27,7 +27,7 @@ const MyProducts = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://https://ecom-backend-16sc.onrender.com/api/products');
+      const response = await axios.get('https://ecom-backend-16sc.onrender.com/api/products');
       setProducts(response.data);
     } catch (error) {
       console.error('Error fetching products:', error);
@@ -60,13 +60,13 @@ const MyProducts = () => {
     try {
       if (editingProduct) {
         // Update product
-        await axios.put(`http://https://ecom-backend-16sc.onrender.com/api/products/${editingProduct._id}`, formData, {
+        await axios.put(`https://ecom-backend-16sc.onrender.com/api/products/${editingProduct._id}`, formData, {
           headers: { 'x-auth-token': localStorage.getItem('token') }
         });
         toast.success('Product updated successfully!');
       } else {
         // Add product
-        await axios.post('http://https://ecom-backend-16sc.onrender.com/api/products', formData, {
+        await axios.post('https://ecom-backend-16sc.onrender.com/api/products', formData, {
           headers: { 'x-auth-token': localStorage.getItem('token') }
         });
         toast.success('Product added successfully!');
@@ -98,7 +98,7 @@ const MyProducts = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
-        await axios.delete(`http://https://ecom-backend-16sc.onrender.com/api/products/${id}`, {
+        await axios.delete(`https://ecom-backend-16sc.onrender.com/api/products/${id}`, {
           headers: { 'x-auth-token': localStorage.getItem('token') }
         });
         toast.success('Product deleted successfully!');

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const API = 'http://https://ecom-backend-16sc.onrender.com/api';
+const API = 'https://ecom-backend-16sc.onrender.com/api';
 const STATUS_COLOR = { Open:'#fdd34d', 'In Progress':'#60a5fa', Resolved:'#84fab0', Closed:'rgba(255,255,255,0.3)' };
 const STATUSES     = ['Open','In Progress','Resolved','Closed'];
 

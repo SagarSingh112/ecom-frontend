@@ -3,7 +3,7 @@ import { useAuth } from '../AuthContext';
 import { useNavigate } from 'react-router-dom';
 import AdminSupport from './AdminSupport';
 
-const API = 'http://https://ecom-backend-16sc.onrender.com/api';
+const API = 'https://ecom-backend-16sc.onrender.com/api';
 const STATUS_COLORS = { Processing:'#fdd34d', Confirmed:'#60a5fa', Shipped:'#a78bfa', 'Out for Delivery':'#fb923c', Delivered:'#84fab0', Cancelled:'#f5576c' };
 const BLANK = { name:'', description:'', price:'', originalPrice:'', discount:'', category:'Electronics', brand:'', stock:'', images:'' };
 

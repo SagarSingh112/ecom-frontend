@@ -12,7 +12,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://https://ecom-backend-16sc.onrender.com/api/products")
+    axios.get("https://ecom-backend-16sc.onrender.com/api/products")
       .then(res => setProducts(res.data))
       .catch(err => console.log(err));
   }, []);

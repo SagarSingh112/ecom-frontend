@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-const API = 'http://https://ecom-backend-16sc.onrender.com/api';
+const API = 'https://ecom-backend-16sc.onrender.com/api';
 
 const STATUS_COLOR = {
   Processing:       '#fdd34d',
